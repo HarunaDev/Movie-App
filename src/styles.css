@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primaryColor: #441feb4b;
+    --secondaryColor: #674be04b;
+  }
+
+  body {
+    background-color: var(--primaryColor);
+    font-family: sans-serif;
+  }
+  
+  header {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondaryColor);
+  }
