@@ -51,3 +51,17 @@ function showMovies(data) {
     main.appendChild(movieEl)
     })
   }
+
+// get color function for ratings
+  function getColor(vote){
+    if(vote >= 8) {
+      return "green"
+    } else if (vote >= 5){
+      return "orange"
+    } else {
+      return "red"
+    }
+  }
+  
+
+  
