@@ -9,3 +9,14 @@ const searchURL = BASE_URL + `/search/movie?` + API_KEY
 const main = document.getElementById("main")
 const form = document.getElementById("form")
 const search = document.getElementById("search")
+
+getMovies(API_URL)
+
+// get movies function
+function getMovies(url) {
+    // request resources from tmdb 
+    fetch(url).then(res => res.json()).then(data => {
+      console.log(data.results)
+      showMovies(data.results)
+    })
+  }
