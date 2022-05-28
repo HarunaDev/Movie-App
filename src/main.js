@@ -6,7 +6,7 @@ const API_URL = BASE_URL + `/discover/movie?sort_by=popularity.desc&` + API_KEY;
 const IMG_URL = `https://image.tmdb.org/t/p/w500`
 const searchURL = BASE_URL + `/search/movie?` + API_KEY
 
-const main = document.getElementById("main")
+const main = document.getElementById("movie-container")
 const form = document.getElementById("form")
 const search = document.getElementById("search")
 
@@ -18,5 +18,36 @@ function getMovies(url) {
     fetch(url).then(res => res.json()).then(data => {
       console.log(data.results)
       showMovies(data.results)
+    })
+  }
+
+//   show movies function
+function showMovies(data) {
+    main.innerHTML = ""
+  
+    // loop through recources to get key-value pairs needed
+    data.forEach(movie => {
+      const {title, poster_path, vote_average, overview} = movie
+      const movieEl = document.createElement("div")
+      movieEl.classList.add("movie")
+    //   created html to display resources 
+      movieEl.innerHTML = `
+         
+      
+        <img src="${IMG_URL + poster_path}" alt="${title}">
+  
+        <div class="movie-info">
+          <h1>${title}</h1>
+          <span class="${getColor(vote_average)}">${vote_average}</span>
+        </div>
+    
+        <div class="overview">
+  
+          <h2>Overview</h2>
+          ${overview}
+        </div>
+      
+      `
+    main.appendChild(movieEl)
     })
   }
