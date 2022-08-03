@@ -53,20 +53,7 @@ function showMovies(data) {
   }
 
 // get color function for ratings
-  // function getColor(vote){
-  //   // if(vote >= 8) {
-  //   //   return "green"
-  //   // } else if (vote >= 5){
-  //   //   return "orange"
-  //   // } else {
-  //   //   return "red"
-  //   // }
-  //   vote = (votes>= 8 ? "green": votes >= 5 ? "orange": "red")
-  // }
-
-  const getColor = (vote) => 
-        (vote >= 8) ? "green": 
-        (vote >= 5) ? "orange" : "red"
+  const getColor = (vote) => (vote >= 8) ? "green": (vote >= 5) ? "orange" : "red"
   
   
 // search field functionality 
@@ -74,11 +61,7 @@ function showMovies(data) {
     e.preventDefault()
   
     const searchTerm = search.value 
-    if(searchTerm) {
-      getMovies(searchURL+`&query=`+searchTerm)
-    }else {
-      getMovies(API_URL)
-    }
+    searchTerm ? getMovies(`${searchURL}&query=${searchTerm}`) : getMovies(API_URL)
   
     search.value = ""
   })
