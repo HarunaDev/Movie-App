@@ -49,3 +49,40 @@ header {
 .search::placeholder {
   color: #fff;
 }
+
+section {
+  padding: 100px 50px;
+}
+
+#Banner {
+  height: 80vh;
+  width: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#Banner h1, h3 {
+  color: #fff;
+  text-align: center;
+  width: 60%;
+  letter-spacing: 1px;
+}
+
+#Banner h1 {
+  font-size: 50px;
+}
+
+#Banner h3 {
+  line-height: 1.3;
+  /* font-size: 20px; */
+}
+
+#Banner button {
+  background-color: var(--secondary-color);
+  padding: 15px 25px;
+  font-size: 20px;
+  border-radius: 50px;
+}
