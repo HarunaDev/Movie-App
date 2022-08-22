@@ -101,15 +101,23 @@ header {
   justify-content: space-between;
 }
 
-#review .left, img {
+#review .left, .right, img {
   width: 50%;
 }
 
-#review .left {
+#review .left, .right {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+#review .left {
   align-items: flex-start;
+
+}
+
+#review .right {
+  align-items: flex-end;
 }
 
 #review .left h1, h3 {
@@ -117,12 +125,17 @@ header {
   text-align: left;
 }
 
-#review .left h1 {
+#review .right h3, h1 {
+  color: #fff;
+  text-align: right;
+}
+
+#review .left h1, .right h1 {
   font-size: 45px;
   width: 60%;
 }
 
-#review .left h3 {
+#review .left h3, .right h3 {
   width: 80%;
   line-height: 1.3;
 }
