@@ -156,10 +156,35 @@ header {
 /* --Alt-text styling */
 
 /* top-rated styling */
+#top-rated .rated-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 #top-rated > h1 {
   text-align: start;
   font-size: 40px;
   margin-bottom: 50px;
+}
 
+#top-rated .movie-box {
+  display: block;
+  max-width: 350px;
+  height: 100%;
+  border: 2px solid red;
+  color: #fff;
+  margin: auto auto 30px;
+}
+
+.movie-box img {
+  width: 100%;
+}
+
+.movie-box .movie-info {
+  display: flex;
+}
+
+.movie-box .overview {
+  display: none;
 }
 /* --Top-rated styling */
