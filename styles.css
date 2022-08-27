@@ -168,6 +168,7 @@ header {
 }
 
 #top-rated .movie-box {
+  position: relative;
   display: block;
   max-width: 350px;
   height: 100%;
@@ -180,11 +181,32 @@ header {
   width: 100%;
 }
 
-.movie-box .movie-info {
+.movie-box .movie-info, .info-right {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.movie-info .info-right span{
+  margin-right: 10px;
 }
 
 .movie-box .overview {
   display: none;
 }
+
+.movie-box:hover .overview{
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  padding: 10px;
+  background: rgba(0,0,0,.7);
+}
+
+.overview h2 {
+  margin-bottom: 15px;
+}
+
 /* --Top-rated styling */
