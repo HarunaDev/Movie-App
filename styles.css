@@ -173,7 +173,7 @@ header {
   display: block;
   max-width: 350px;
   height: 100%;
-  border: 2px solid red;
+  border: 2px solid var(--secondary-color);
   color: #fff;
   margin: auto auto 30px;
 }
@@ -211,3 +211,55 @@ header {
 }
 
 /* --Top-rated styling */
+
+/* Questions styling */
+#FAQ {
+  color: #fff;
+}
+
+h1.faq-header  {
+  text-align: center;
+  font-size: 44px;
+  margin-bottom: 100px;
+}
+
+.question-section {
+  width: 100%;
+  height: 100%;
+}
+
+.question {
+  border: 2px solid var(--secondary-color);
+  width: 50%;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  margin: 0 auto 2rem;
+}
+
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  padding-bottom: 1rem;
+}
+
+.question-title p {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.question-title > p {
+  color: #999;
+}
+
+.question-btn { 
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  color: var(--secondary-color);
+  transition: ease-in;
+}
+
+/* --Questions styling */
