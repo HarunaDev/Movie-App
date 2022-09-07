@@ -262,4 +262,19 @@ h1.faq-header  {
   transition: ease-in;
 }
 
+.question-text {
+  padding: 1rem 0 1.5rem 0;
+  border-top: 1px solid var(--secondary-color);
+}
+.question-text p {
+  margin-bottom: 0;
+  color: rgb(230, 228, 228);
+  line-height: 1.4;
+  letter-spacing: 2px;
+}
+
+/* .question-btn:hover {
+  transform: rotate(90deg);
+} */
+
 /* --Questions styling */
