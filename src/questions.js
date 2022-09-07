@@ -14,5 +14,12 @@
 // questionObject.btnsClick()
 
 const questionObject = {
-  question: document.querySelectorAll(".question")
+  question: document.querySelectorAll(".question"),
+  
+  
 };
+
+questionObject.question.forEach(function(question) {
+  console.log(question)
+ 
+})
