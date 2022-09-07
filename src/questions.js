@@ -14,12 +14,15 @@
 // questionObject.btnsClick()
 
 const questionObject = {
-  question: document.querySelectorAll(".question"),
-  
-  
+  questions: document.querySelectorAll(".question"), 
+  showBtn() {
+    this.questions.forEach(function(question) {
+      const btn = question.querySelector(".question-btn");
+      btn.addEventListener("click", function(){
+        question.classList.toggle("show-text")
+      })
+    })
+  }
 };
 
-questionObject.question.forEach(function(question) {
-  console.log(question)
- 
-})
+questionObject.showBtn();
