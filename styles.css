@@ -295,3 +295,25 @@ h1.faq-header  {
 }
 
 /* --Questions styling */
+
+/* Footer styling */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+  color: #fff;
+}
+
+.footer-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.footer-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Footer styling */
