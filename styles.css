@@ -301,19 +301,25 @@ h1.faq-header  {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* align-items: flex-start; */
-  color: #fff;
 }
 
 .footer-header {
   text-align: center;
   margin-bottom: 50px;
+  color: #444;
 }
 
 .footer-links {
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+.footer-links ul li {
+  list-style: none;
+  font-size: 18px;
+  color: #666;
+  padding-bottom: 5px;
 }
 
 /* Footer styling */
