@@ -31,8 +31,22 @@ const App = {
     </section>
     `
   },
+  showReview() {
+    this.mainBody.innerHTML += `
+    <section id="review">
+    <img src="./img/jiraiya.png" alt="">
+
+    <div class="right">
+      <h1>Lorem ipsum dolor sit amet.</h1>
+
+      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, facere! Quaerat, et nostrum?</h3>
+    </div>
+  </section>
+    `
+  },
   renderPage() {
     this.showBanner()
+    this.showReview()
   }
 }
 
