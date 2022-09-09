@@ -157,7 +157,7 @@ header {
 /* --Alt-text styling */
 
 /* top-rated styling */
-#top-rated .rated-container {
+#top-rated #rated-container {
   display: flex;
   flex-wrap: wrap;
 }
