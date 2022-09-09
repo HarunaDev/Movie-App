@@ -32,7 +32,7 @@ const App = {
     `
   },
   renderPage() {
-    this.showBanner
+    this.showBanner()
   }
 }
 
