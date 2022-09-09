@@ -30,9 +30,13 @@ const App = {
     <button>Get started</button>
     </section>
     `
+  },
+  renderPage() {
+    this.showBanner
   }
 }
 
+App.renderPage()
 
 /*
 version-1 code function
