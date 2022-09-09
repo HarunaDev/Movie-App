@@ -19,7 +19,18 @@
 
 
 const App = {
-  mainBody: document.getElementById("movie-container")
+  mainBody: document.getElementById("movie-container"),
+  showBanner() {
+    this.mainBody.innerHTML = `
+    <section id="Banner">
+    <h1>Lorem ipsum dolor sit amet.</h1>
+  
+    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, voluptates? Et possimus dolor numquam in.</h3>
+  
+    <button>Get started</button>
+    </section>
+    `
+  }
 }
 
 
