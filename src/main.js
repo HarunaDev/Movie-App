@@ -31,22 +31,35 @@ const App = {
     </section>
     `
   },
-  showReview() {
-    this.mainBody.innerHTML += `
-    <section id="review">
-    <img src="./img/jiraiya.png" alt="">
+  showReview(image,side) {
+ 
+  side === "right" ? this.mainBody.innerHTML += `
+  //   <section id="review">
+  //   <img src="img/${image}" alt="">
 
-    <div class="right">
-      <h1>Lorem ipsum dolor sit amet.</h1>
+  //   <div class="${side}">
+  //     <h1>Lorem ipsum dolor sit amet.</h1>
 
-      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, facere! Quaerat, et nostrum?</h3>
-    </div>
-  </section>
-    `
+  //     <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, facere! Quaerat, et nostrum?</h3>
+  //   </div>
+  // </section>
+  //   `:  this.mainBody.innerHTML += `
+  //     <section id="review">
+  //     <div class="${side}">
+  //       <h1>Lorem ipsum dolor sit amet.</h1>
+    
+  //       <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, facere! Quaerat, et nostrum?</h3>
+  //     </div>
+    
+  //     <img src="img/${image}" alt="">
+  //   </section>
+  //     `;
+    
   },
   renderPage() {
     this.showBanner()
-    this.showReview()
+    this.showReview("blank.png", "right")
+    this.showReview("jiraiya.png", "left")
   }
 }
 
