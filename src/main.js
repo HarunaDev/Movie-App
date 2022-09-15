@@ -45,28 +45,59 @@ const App = {
   },
   showReview(image,side) {
  
-  side === "right" ? this.mainBody.innerHTML += `
-  //   <section id="review">
-  //   <img src="img/${image}" alt="">
+  // side === "right" ? this.mainBody.innerHTML += `
+  //    <section id="review">
+  //    <img src="img/${image}" alt="">
 
-  //   <div class="${side}">
-  //     <h1>Lorem ipsum dolor sit amet.</h1>
+  //    <div class="${side}">
+  //      <h1>Lorem ipsum dolor sit amet.</h1>
 
-  //     <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, facere! Quaerat, et nostrum?</h3>
-  //   </div>
-  // </section>
-  //   `:  this.mainBody.innerHTML += `
-  //     <section id="review">
-  //     <div class="${side}">
-  //       <h1>Lorem ipsum dolor sit amet.</h1>
+  //      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, facere! Quaerat, et nostrum?</h3>
+  //    </div>
+  //  </section>
+  //    `:  this.mainBody.innerHTML += `
+  //      <section id="review">
+  //      <div class="${side}">
+  //        <h1>Lorem ipsum dolor sit amet.</h1>
     
-  //       <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, facere! Quaerat, et nostrum?</h3>
-  //     </div>
+  //        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, facere! Quaerat, et nostrum?</h3>
+  //      </div>
     
-  //     <img src="img/${image}" alt="">
-  //   </section>
-  //     `;
-    
+  //      <img src="img/${image}" alt="">
+  //    </section>
+  //      `;
+
+  if(side === 'right'){
+    this.innerHTML = ""
+    const section = document.createElement('section')
+    section.setAttribute('id',  'review')
+    section.innerHTML = `
+    <img src="img/${image}" alt="">
+
+        <div class="${side}">
+          <h1>Lorem ipsum dolor sit amet.</h1>
+  
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, facere! Quaerat, et nostrum?</h3>
+        </div>
+    `;
+    this.mainBody.appendChild(section)
+
+  } else if(side === 'left'){
+      this.innerHTML = ""
+      const section = document.createElement('section')
+      section.setAttribute('id',  'review')
+      section.innerHTML = `
+      <div class="${side}">
+              <h1>Lorem ipsum dolor sit amet.</h1>
+        
+              <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, facere! Quaerat, et nostrum?</h3>
+            </div>
+        
+            <img src="img/${image}" alt="">
+      `;
+      this.mainBody.appendChild(section)
+  }
+   return; 
   },
   renderPage() {
     this.showBanner()
