@@ -16,7 +16,7 @@ const App = {
   },
   showReview(image,side) {
   if(side === 'right'){
-    this.innerHTML = ""
+    // this.innerHTML = ""
     const section = document.createElement('section')
     section.setAttribute('id',  'review')
     section.innerHTML = `
@@ -30,7 +30,7 @@ const App = {
     `;
     this.mainBody.appendChild(section);
   } else if(side === 'left'){
-      this.innerHTML = "";
+      // this.innerHTML = "";
       const section = document.createElement('section')
       section.setAttribute('id',  'review')
       section.innerHTML = `
@@ -46,10 +46,15 @@ const App = {
   }
    return; 
   },
+  showQuestions() {
+    // this.mainBody.innerHTML = ""
+    const questionArr = []
+  },
   renderPage() {
     this.showBanner();
     this.showReview("blank.png", "right");
     this.showReview("jiraiya.png", "left");
+    this.showQuestions()
   }
 };
 
