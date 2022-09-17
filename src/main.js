@@ -87,6 +87,11 @@ const App = {
       article.setAttribute('class', 'question')
       question_section.appendChild(article)
 
+      const questionTitle = document.createElement('div')
+      questionTitle.setAttribute('class', 'question-title')
+      questionTitle.innerHTML = `<p>${faQuestion.question_title}</p>`
+      article.appendChild(questionTitle)
+
     })
 
     
