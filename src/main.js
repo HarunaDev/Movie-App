@@ -82,6 +82,15 @@ const App = {
     question_section.innerHTML = ''
     questions.appendChild(question_section)
 
+    questionArr.forEach(faQuestion => {
+      const article = document.createElement('article')
+      article.setAttribute('class', 'question')
+      question_section.appendChild(article)
+
+    })
+
+    
+
   },
   renderPage() {
     this.showBanner();
