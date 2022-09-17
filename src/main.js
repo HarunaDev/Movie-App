@@ -105,6 +105,11 @@ const App = {
       `;
       questionTitle.appendChild(button)
 
+      const questionText = document.createElement('div')
+      questionText.setAttribute('class', 'question-text')
+      questionText.innerHTML = `<p>${faQuestion.question_text}</p>`;
+      article.appendChild(questionText)
+
     })
 
     
