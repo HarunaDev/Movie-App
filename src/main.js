@@ -92,6 +92,19 @@ const App = {
       questionTitle.innerHTML = `<p>${faQuestion.question_title}</p>`
       article.appendChild(questionTitle)
 
+      const button = document.createElement('button')
+      button.setAttribute('class', 'question-btn')
+      button.setAttribute('type', 'button')
+      button.innerHTML = `
+        <span class="plus-icon">
+          <p>+</p>
+        </span>
+        <span class="minus-icon">
+          <p>-</p>
+        </span>
+      `;
+      questionTitle.appendChild(button)
+
     })
 
     
