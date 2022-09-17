@@ -68,6 +68,20 @@ const App = {
     section.innerHTML = ''
     this.mainBody.appendChild(section)
 
+    // the code below will contain a lot of repeat, but for now the purpose is to get it to work properly, then refactor the code later for readability purpose
+
+    const questions = document.createElement('div')
+    questions.setAttribute('class', 'questions')
+    questions.innerHTML = `
+    <h1 class="faq-header">Frequently Asked Questions</h1>
+    `;
+    section.appendChild(questions)
+
+    const question_section = document.createElement('div')
+    question_section.setAttribute('class', 'question-section')
+    question_section.innerHTML = ''
+    questions.appendChild(question_section)
+
   },
   renderPage() {
     this.showBanner();
