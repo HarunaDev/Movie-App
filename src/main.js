@@ -1,6 +1,17 @@
 const App = {
   mainBody: document.getElementById("movie-container"),
+  header: document.getElementById("header-container"),
   // methods
+  // show header method
+  showHeader() {
+    // created show header method to display render header elements
+    this.header.innerHTML = `<h1>Show<span>Plus</span> </h1>`;
+    const header_left = document.createElement('div')
+    header_left.setAttribute('class', 'left')
+    header_left.innerHTML = `<h1>O</h1>`;
+    this.header.appendChild(header_left);
+
+  },
   // show  banner method
   showBanner() {
     this.mainBody.innerHTML = "";
@@ -123,6 +134,7 @@ const App = {
   },
   // render page method
   renderPage() {
+    this.showHeader();
     this.showBanner();
     this.showReview("blank.png", "right");
     this.showReview("jiraiya.png", "left");
