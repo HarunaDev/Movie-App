@@ -143,7 +143,30 @@ const App = {
       questionText.setAttribute('class', 'question-text')
       questionText.innerHTML = `<p>${faQuestion.question_text}</p>`;
       article.appendChild(questionText);
+
+
     });
+
+    // question toggle 
+    const question_article = document.querySelectorAll(".question");
+
+    question_article.forEach(function (fold) {
+      const btn = fold.querySelector(".question-btn");
+      console.log(btn);
+
+      btn.addEventListener("click", function () {
+        // console.log(question);
+
+        question_article.forEach(function (item) {
+          if (item !== fold) {
+            item.classList.remove("show-text");
+          };
+        });
+
+        fold.classList.toggle("show-text");
+      });
+    });
+
   },
   // show footer method
   showFooter() {
