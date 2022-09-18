@@ -11,6 +11,10 @@ const App = {
     header_left.innerHTML = `<h1>O</h1>`;
     this.header.appendChild(header_left);
 
+    const form = document.createElement('form')
+    form.setAttribute('id', 'form')
+    header_left.appendChild(form)
+
   },
   // show  banner method
   showBanner() {
