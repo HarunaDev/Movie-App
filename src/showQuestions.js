@@ -79,7 +79,6 @@ export function showQuestions() {
 
     question_article.forEach(function (fold) {
       const btn = fold.querySelector(".question-btn");
-      console.log(btn);
 
       btn.addEventListener("click", function () {
         // console.log(question);
