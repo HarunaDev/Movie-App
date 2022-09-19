@@ -1,4 +1,5 @@
 import { showHeader } from "./showHeader.js";
+import { showBanner } from "./showBanner.js";
 
 const App = {
   mainBody: document.getElementById("movie-container"),
@@ -6,20 +7,7 @@ const App = {
   footer: document.getElementById("footer"),
   // methods
   showHeader,
-  // show  banner method
-  showBanner() {
-    this.mainBody.innerHTML = "";
-    const section = document.createElement('section')
-    section.setAttribute('id', 'Banner')
-    section.innerHTML = `
-    <h1>Lorem ipsum dolor sit amet.</h1>
-  
-    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, voluptates? Et possimus dolor numquam in.</h3>
-  
-    <button>Get started</button>
-    `;
-    this.mainBody.appendChild(section);
-  },
+  showBanner,
   // show review method
   showReview(image,side) {
     // check if side is right then render the value in tempelate literals
