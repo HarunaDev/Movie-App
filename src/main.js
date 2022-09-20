@@ -1,10 +1,13 @@
 import { showHeader } from "./showHeader.js";
 import { showBanner } from "./showBanner.js";
 import { showReview } from "./showReview.js";
+import { getMovies } from "./showMovies.js";
 import { showMovies } from "./showMovies.js";
 import { showQuestions } from "./showQuestions.js";
 import { showFooter } from "./showFooter.js";
+import { base_url, api_url, img_url } from "./showMovies.js";
 
+// getMovies(api_url)
 const App = {
   mainBody: document.getElementById("movie-container"),
   header: document.getElementById("header-container"),
@@ -18,6 +21,7 @@ const App = {
   // show review method
   showReview,
   // show movies method
+  // getMovies,
   showMovies,
   // show questions method
   showQuestions,
@@ -29,6 +33,8 @@ const App = {
   this.showBanner();
   this.showReview("blank.png", "right");
   this.showReview("jiraiya.png", "left");
+  // this.getMovies()
+  // getMovies(api_url)
   this.showMovies();
   this.showQuestions();
   this.showFooter();
