@@ -22,4 +22,8 @@ export function showMovies(data) {
   section.innerHTML = `<h1>Top rated</h1>`
   this.mainBody.appendChild(section)
 
+  // create wrapper and append to section
+  const wrapper = document.createElement('div')
+  wrapper.setAttribute('id', 'rated-container')
+  section.appendChild(wrapper)
 }
