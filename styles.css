@@ -186,11 +186,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  width: auto;
+  height: 50px;
+  padding: 0 5px;
+}
+
+.movie-info h1 {
+  font-size: 22px;
 }
 
 .movie-info .info-right span{
   margin-right: 10px;
+  margin-left: auto;
 }
 
 .movie-box .overview {
