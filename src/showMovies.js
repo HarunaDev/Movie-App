@@ -33,5 +33,10 @@ export function showMovies(data) {
     </div>
     `;
    wrapper.appendChild(movieEl);
+
+  //  Added event listener on movieEl
+   movieEl.addEventListener('click', ()=> {
+    console.log("clicked")
+   });
   });
 }
