@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 /* General styling */
 * {
   margin: 0;
@@ -14,6 +15,7 @@ body {
   background-color: var(--primary-color);
   font-family: sans-serif;
   letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
 }
 
 section {
@@ -58,6 +60,9 @@ header {
 .search::placeholder {
   color: #fff;
 }
+
+/* Header media query */
+@media only screen and (max-width: 700px) {}
 /* --Header styling */
 
 /* Banner styling */
@@ -66,24 +71,26 @@ header {
   background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
-#Banner h1, h3 {
+#Banner h1 h3 {
   color: #fff;
   text-align: center;
-  width: 50%;
+  width: 100%;
   letter-spacing: 1px;
 }
 
 #Banner h1 {
   font-size: 50px;
+  margin-bottom: 20px;
 }
 
 #Banner h3 {
-  line-height: 1.3;
-  text-align: center;
+  font-size: 26px;
+  margin-bottom: 15px;
+  /* text-align: center; */
 }
 
 #Banner button {
@@ -91,6 +98,19 @@ header {
   padding: 15px 25px;
   font-size: 20px;
   border-radius: 50px;
+}
+
+/* Banner media query */
+@media only screen and (max-width: 600px) {
+  #Banner h1 {
+    font-size: 40px;
+  }
+  #Banner h3 {
+    font-size: 40px;
+  }
+  #Banner button {
+    padding: 13px 22px;
+  }
 }
 /* --Banner styling */
 
@@ -133,17 +153,65 @@ header {
 
 #review .left h1, .right h1 {
   font-size: 45px;
-  width: 60%;
+  width: 70%;
 }
 
 #review .left h3, .right h3 {
   width: 80%;
   line-height: 1.3;
 }
+
+/* Review media query */
+@media only screen and (max-width: 800px) {
+  #review .left h1, .right h1 {
+    font-size: 40px;
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #review {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  #review .left, .right, img {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+
+  #review .left{
+    align-items: center;
+  }
+
+  #review .right{
+    align-items: center;
+  }
+  
+  #review .left h1, h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  #review .right h3, h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #review .left h1, .right h1 {
+    /* font-size: 36px; */
+    width: 100%;
+  }
+}
 /* --Review styling */
 
 /* Alt-text styling */
-#alt-text {
+/* #alt-text {
   padding: 50px 60px;
 }
 
@@ -153,7 +221,7 @@ header {
   color: #fff;
   width: 60%;
   margin: 0 auto;
-}
+} */
 /* --Alt-text styling */
 
 /* top-rated styling */
@@ -171,8 +239,8 @@ header {
 #top-rated .movie-box {
   position: relative;
   display: block;
-  max-width: 350px;
-  height: 100%;
+  max-width: 300px;
+  /* height: 300px; */
   border: 2px solid var(--secondary-color);
   color: #fff;
   margin: auto auto 30px;
@@ -180,6 +248,7 @@ header {
 
 .movie-box img {
   width: 100%;
+  height: auto;
 }
 
 .movie-box .movie-info, .info-right {
@@ -192,12 +261,13 @@ header {
 }
 
 .movie-info h1 {
-  font-size: 22px;
+  font-size: 20px;
+  text-align: start;
 }
 
 .movie-info .info-right span{
   margin-right: 10px;
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 
 .movie-box .overview {
@@ -214,7 +284,15 @@ header {
 }
 
 .overview h2 {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+/* Top-rated media query */
+@media only screen and (max-width: 600px) {
+  #top-rated > h1 {
+    font-size: 30px;
+    text-align: center;
+  }
 }
 
 /* --Top-rated styling */
@@ -301,6 +379,21 @@ h1.faq-header  {
   display: none;
 }
 
+/* Questions media query */
+@media only screen and (max-width: 960px) {
+  .question {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  h1.faq-header  { 
+    font-size: 30px;
+  }
+  .question {
+    width: 100%;
+  }
+}
+
 /* --Questions styling */
 
 /* Footer styling */
@@ -330,3 +423,15 @@ h1.faq-header  {
 }
 
 /* Footer styling */
+
+@media only screen and (max-width: 800px) {
+  section {
+    padding: 100px 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    padding: 100px 20px;
+  }
+}
