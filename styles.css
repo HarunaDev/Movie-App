@@ -16,6 +16,7 @@ body {
   font-family: sans-serif;
   letter-spacing: 1px;
   font-family: 'Lato', sans-serif;
+  color: #fff;
 }
 
 section {
@@ -75,7 +76,7 @@ header {
   align-items: center;
 }
 
-#Banner h1 h3 {
+#Banner h1, h3 {
   color: #fff;
   text-align: center;
   width: 100%;
@@ -90,7 +91,6 @@ header {
 #Banner h3 {
   font-size: 26px;
   margin-bottom: 15px;
-  /* text-align: center; */
 }
 
 #Banner button {
@@ -106,7 +106,7 @@ header {
     font-size: 40px;
   }
   #Banner h3 {
-    font-size: 40px;
+    font-size: 22px;
   }
   #Banner button {
     padding: 13px 22px;
@@ -134,21 +134,20 @@ header {
 
 #review .left {
   align-items: flex-start;
-
 }
 
 #review .right {
   align-items: flex-end;
 }
 
-#review .left h1, h3 {
-  color: #fff;
-  text-align: left;
-}
-
-#review .right h3, h1 {
+#review .right h1, .right h3 {
   color: #fff;
   text-align: right;
+}
+
+#review .left h1, .left h3 {
+  color: #fff;
+  text-align: left;
 }
 
 #review .left h1, .right h1 {
@@ -159,54 +158,6 @@ header {
 #review .left h3, .right h3 {
   width: 80%;
   line-height: 1.3;
-}
-
-/* Review media query */
-@media only screen and (max-width: 800px) {
-  #review .left h1, .right h1 {
-    font-size: 40px;
-    width: 80%;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  #review {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  #review .left, .right, img {
-    width: 60%;
-    margin-bottom: 10px;
-  }
-
-  #review .left{
-    align-items: center;
-  }
-
-  #review .right{
-    align-items: center;
-  }
-  
-  #review .left h1, h3 {
-    text-align: center;
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  
-  #review .right h3, h1 {
-    text-align: center;
-    margin-bottom: 5px;
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #review .left h1, .right h1 {
-    /* font-size: 36px; */
-    width: 100%;
-  }
 }
 /* --Review styling */
 
