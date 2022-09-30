@@ -117,12 +117,12 @@ header {
 /* Review styling */
 #review {
   height: 80vh;
-  width: 100%;
+  min-width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-#review .left, .right, img {
+#review  img {
   width: 50%;
 }
 
@@ -158,6 +158,68 @@ header {
 #review .left h3, .right h3 {
   width: 80%;
   line-height: 1.3;
+}
+
+/* Review media query */
+@media only screen and (max-width: 980px) {
+  #review {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  section {
+    padding: 100px 10px;
+  }
+
+  #review img {
+    margin: 15px 0 15px;
+    width: 70%;
+  }
+
+  #review .left{
+    align-items: center;
+    width: 80%;
+  }
+
+  #review .right{
+    align-items: center;
+    width: 80%;
+  }
+
+  #review .right h1, .right h3 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  #review .left h1, .left h3 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  #review .left h3 {
+    width: 100%;
+  }
+
+  #review .left h1, .right h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #review .left{
+    width: 100%;
+  }
+
+  #review .right{
+    width: 100%;
+  }
+
+  #review .left h1, .right h1 {
+    font-size: 36px;
+  }
 }
 /* --Review styling */
 
