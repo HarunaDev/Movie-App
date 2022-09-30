@@ -20,7 +20,7 @@ export function showQuestions() {
     const section = document.createElement('section')
     section.setAttribute('id', 'FAQ')
     section.innerHTML = '';
-    this.mainBody.appendChild(section);
+    this.faq.appendChild(section);
 
     // the code below will contain a lot of repeat, but for now the purpose is to get it to work properly, then refactor the code later for readability purpose
 

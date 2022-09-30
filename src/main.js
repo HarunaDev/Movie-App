@@ -10,6 +10,7 @@ import { API_KEY } from "./variable.js";
 const App = {
   mainBody: document.getElementById("movie-container"),
   header: document.getElementById("header-container"),
+  faq: document.getElementById("faq-container"),
   footer: document.getElementById("footer"),
   base_url: "https://api.themoviedb.org/3",
   api_url:  "/discover/movie?sort_by=popularity.desc&" + API_KEY,
