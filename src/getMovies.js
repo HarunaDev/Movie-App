@@ -1,5 +1,5 @@
-import App from "./main.js";
-import { showMovies } from "./showMovies.js";
+// import App from "./main.js";
+// import { showMovies } from "./showMovies.js";
 
 export function getMovies(url) {
   // request resources from tmdb
