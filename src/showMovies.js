@@ -1,4 +1,4 @@
-import  App  from "./main.js";
+// import  App  from "./main.js";
 
 export function showMovies(data) {
   // display create section and display h1
